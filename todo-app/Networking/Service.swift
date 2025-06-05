@@ -9,7 +9,7 @@ import Foundation
 
 class Service {
     static let shared = Service()
-    private let baseURL = URL(string: "http://172.20.205.254:8000")!
+    private let baseURL = URL(string: "http://localhost:8000")!
     
     func getTasks(completion: @escaping (Result<[TaskModel], Error>) -> Void) {
         let request = URLRequest(url: baseURL.appending(path: "/tasks"))
